@@ -12,7 +12,7 @@ export default function ImagePicker({ label, name, onChange }) {
 		const file = event.target.files[0];
 		if (!file) {
 			setPickedImage(null);
-			onChange(null);
+			// onChange(null);
 			return;
 		}
 		const fileReader = new FileReader();
@@ -20,7 +20,7 @@ export default function ImagePicker({ label, name, onChange }) {
 			setPickedImage(fileReader.result);
 		};
 		fileReader.readAsDataURL(file);
-		onChange(file);
+		// onChange(file);
 	}
 	return (
 		<div className={classes.picker}>
